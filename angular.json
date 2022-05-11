@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "artists-domain": "libs/artists/domain",
+    "artists-feature-search": "libs/artists/feature-search",
+    "test-app": "apps/test-app",
+    "test-app-e2e": "apps/test-app-e2e",
+    "web-components-artist": "apps/web-components-artist",
+    "web-components-artist-e2e": "apps/web-components-artist-e2e"
+  }
+}

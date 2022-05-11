@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/artists/feature-search/src",
+  "prefix": "music-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/artists/feature-search"],
+      "options": {
+        "jestConfig": "libs/artists/feature-search/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/artists/feature-search/**/*.ts",
+          "libs/artists/feature-search/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

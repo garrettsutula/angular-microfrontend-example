@@ -1,0 +1,14 @@
+<div *ngIf="vm$ | async as vm">
+  <table>
+    <tr>
+      <ng-container *ngFor="let propertyName of columns">
+        <th *ngIf="columns.every(propertyInArtists)">{{propertyName}}</th>
+      </ng-container>
+    </tr>
+    <tr *ngFor="let artist of vm.artists">
+      <ng-container *ngFor="let propertyName of columns" >
+        <td *ngIf="propertyName in artist">{{$any(artist)[propertyName]}}</td>
+      </ng-container>
+    </tr>
+  </table>
+</div>
