@@ -18,7 +18,9 @@
       "@music-app/artists/domain": ["libs/artists/domain/src/index.ts"],
       "@music-app/artists/feature-search": [
         "libs/artists/feature-search/src/index.ts"
-      ]
+      ],
+      "@music-app/music-ui": ["libs/music-ui/src/index.ts"],
+      "@music-app/music-utils": ["libs/music-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

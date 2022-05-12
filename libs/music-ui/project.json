@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/music-ui/src",
+  "prefix": "music-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/music-ui"],
+      "options": {
+        "jestConfig": "libs/music-ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/music-ui/**/*.ts", "libs/music-ui/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

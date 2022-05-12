@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SearchFacade } from '@music-app/artists/domain';
-import { Artist } from '@music-app/artists/domain';
 
 @Component({
   selector: 'music-app-artists-table',
@@ -9,9 +8,8 @@ import { Artist } from '@music-app/artists/domain';
 })
 export class ArtistsTableComponent implements OnInit {
   @Input() name?: string;
-  @Input() columns: string[] = ['id', 'name', 'label', 'genre'];
+  columns: string[] = ['id', 'name', 'label', 'genre'];
   vm$ = this.facade.vm$;
-  propertyInArtists = this.facade.propertyInArtists;
 
   constructor(private facade: SearchFacade) {}
 

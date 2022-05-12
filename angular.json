@@ -3,6 +3,8 @@
   "projects": {
     "artists-domain": "libs/artists/domain",
     "artists-feature-search": "libs/artists/feature-search",
+    "music-ui": "libs/music-ui",
+    "music-utils": "libs/music-utils",
     "test-app": "apps/test-app",
     "test-app-e2e": "apps/test-app-e2e",
     "web-components-artist": "apps/web-components-artist",

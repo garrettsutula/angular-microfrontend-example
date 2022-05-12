@@ -59,10 +59,6 @@ export class SearchFacade {
     return searchTerm;
   }
 
-  propertyInArtists(property: string) {
-    return _state.artists.some((artist) => property in artist);
-  }
-
   // Private Methods
   private updateState(state: SearchState) {
     this.store.next((_state = state));

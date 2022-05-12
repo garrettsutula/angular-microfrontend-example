@@ -1,0 +1,14 @@
+<div>
+  <table>
+    <tr>
+      <ng-container *ngFor="let propertyName of columns">
+        <th>{{propertyName}}</th>
+      </ng-container>
+    </tr>
+    <tr *ngFor="let row of rows">
+      <ng-container *ngFor="let propertyName of columns" >
+        <td><ng-container *ngIf="propertyName in rows">{{$any(rows)[propertyName]}}</ng-container></td>
+      </ng-container>
+    </tr>
+  </table>
+</div>
