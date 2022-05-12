@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { SearchFacade } from '@music-app/artists/domain';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 import { propertyExistsInCollection } from '@music-app/music-utils';
 
@@ -8,16 +7,13 @@ import { propertyExistsInCollection } from '@music-app/music-utils';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnChanges {
   @Input() rows: Record<string, any>[] = [];
   @Input() columns: string[] = ['id', 'name'];
-  vm$ = this.facade.vm$;
-
-  constructor(private facade: SearchFacade) {}
-
-  ngOnInit(): void {
-      this.columns = this.columns.filter((column) => propertyExistsInCollection(column, this.rows));
+  _tableColumns: string[] = [];
+  
+  ngOnChanges(): void {
+    this._tableColumns = this.columns.filter((column) => propertyExistsInCollection(column, this.rows));
   }
   
-
 }
